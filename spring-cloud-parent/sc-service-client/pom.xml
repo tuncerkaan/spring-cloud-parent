@@ -5,7 +5,7 @@
     <artifactId>spring-cloud-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>sc-service</artifactId>
+  <artifactId>sc-service-client</artifactId>
   
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
