@@ -1,0 +1,30 @@
+sc-config-server:
+    image: springcloudstack_sc-config-server:v1
+    hostname: "configserver"
+    ports:
+     - "8888:8888"
+     
+sc-service:
+    image: springcloudstack_sc-service:v1
+    hostname: "service_1"
+    links:
+        - "sc-config-server:configserver"
+    ports:
+        - "8081:8081"   
+    environment:
+        CONFIGSERVER_HOST:   "configserver"
+        CONFIGSERVER_PORT:   "8888"  
+       
+sc-service-client:
+    image: springcloudstack_sc-service-client:v1
+    hostname: "serviceclient"
+    links:
+        - "sc-config-server:configserver"
+    ports:
+        - "8083:8083"   
+    environment:
+        CONFIGSERVER_HOST:   "configserver"
+        CONFIGSERVER_PORT:   "8888"   
+    
+        
+
