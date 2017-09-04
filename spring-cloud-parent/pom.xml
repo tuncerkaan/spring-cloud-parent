@@ -30,5 +30,6 @@
 		<module>sc-zuul-proxy</module>
     <module>sc-hystrix-dashboard</module>
     <module>sc-zipkin</module>
+    <module>sc-user-service</module>
   </modules>
 </project>
